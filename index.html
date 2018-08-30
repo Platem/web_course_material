@@ -9,8 +9,13 @@
         <link rel="stylesheet" href="assets/css/main.min.css">
 
         <!-- JS -->
+        <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script>
         <script src="assets/js/lib/jquery-3.3.1.min.js"></script>
+        <script src="assets/js/util.min.js"></script>
+        <script src="assets/js/collection.min.js"></script>
         <script src="assets/js/main.min.js"></script>
+        <script> firebase.initializeApp(config); </script>
     </head>
     <body>
         <!-- Navigation -->
@@ -22,25 +27,30 @@
         <div class="container">
             <div class="collection">
                 <div class="collection-title">
-                    This is a collection
+                    Course Materials
                 </div>
-                <div class="collection-content">
-                    <div class="collection-item">
-                        <div class="collection-item-title">Item A</div>
-                        <div class="collection-item-content">This is the short description for item A</div>
-                    </div>
-                    <div class="collection-item">
-                        <div class="collection-item-title">Item B</div>
-                        <div class="collection-item-content">This is the short description for item B</div>
-                    </div>
-                    <div class="collection-item">
-                        <div class="collection-item-title">Item C</div>
-                        <div class="collection-item-content">This is the short description for item C</div>
-                    </div>
+                <div id="list-collection" class="collection-content">
                 </div>
             </div>
         </div>
 
         <!-- Detail -->
+        <div id="detail" class="show">
+            <div class="back"></div>
+            <div class="front">
+                <div class="detail-close">&times;</div>
+                <div class="detail-title">Title here</div>
+                <div class="detail-description">This is the short description</div>
+                <div class="detail-content">This is a long shit</div>
+                <div class="detail-attachments">
+                    <div class="detail-attachment"><a href="#">Attachment 1</a></div>
+                    <div class="detail-attachment"><a href="#">Attachment 2</a></div>
+                    <div class="detail-attachment"><a href="#">Attachment 3</a></div>
+                    <div class="detail-attachment"><a href="#">Attachment 4</a></div>
+                    <div class="detail-attachment"><a href="#">Attachment 5 but it has a really long name</a></div>
+                    <div class="detail-attachment"><a href="#">Attachment 6 and it has an even longer name just to see how this works</a></div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
