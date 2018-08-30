@@ -1,0 +1,14 @@
+@import 'lib/reset';
+
+@import 'vars';
+
+@import 'layout/container';
+@import 'layout/navbar';
+
+@import 'components/collection';
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: $white_smoke;
+}

@@ -1,0 +1,13 @@
+.container {
+    margin: auto;
+    margin-top: #{$navbar-height + 25px};
+    width: 100%;
+
+    @media screen and (min-width: 769px) {
+        width: 88%;
+    }
+
+    @media screen and (min-width: 1201px) {
+        width: 66%;
+    }
+}
