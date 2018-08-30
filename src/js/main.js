@@ -12,6 +12,7 @@ const MaterialItem = (id, data) => ({
     name: data.name,
     description: data.description,
     content: data.content,
+    attachments: data.attached,
     $item: CollecItem(id, data.name, data.description)
 })
 
@@ -24,6 +25,22 @@ $(function() {
     })
 
     $(document).on('click', '.collection-item', function(e) {
+        let id = $(this).attr('id'),
+            item = items.find(x => x.id === id)
+
+        console.log(item)
+
+        $('#detail .detail-title').text(item.name)
+        $('#detail .detail-description').text(item.description)
+        $('#detail .detail-content').text(item.content)
+
+        $('#detail .detail-attachments').empty()
+        for (let attach of item.attachments) {
+            console.log(attach)
+            let $att = $('<div class="detail-attachment"><a href="' + attach.url + '">' + attach.name + '</a></div>')
+            $('#detail .detail-attachments').append($att)
+        }
+
         $('#detail').addClass('show')
     })
 
