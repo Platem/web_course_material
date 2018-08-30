@@ -3,18 +3,20 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>View Web Course Materials</title>
+        <title>Manage Web Course Materials</title>
 
         <!-- CSS -->
-        <link rel="stylesheet" href="assets/css/main.min.css">
+        <link rel="stylesheet" href="../assets/css/main.min.css">
 
         <!-- JS -->
-        <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script>
-        <script src="assets/js/lib/jquery-3.3.1.min.js"></script>
-        <script src="assets/js/util.min.js"></script>
-        <script src="assets/js/collection.min.js"></script>
-        <script src="assets/js/main.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+        <!-- <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script> -->
+        <!-- <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-firestore.js"></script> -->
+        <script src="../assets/js/lib/jquery-3.3.1.min.js"></script>
+        <script src="../assets/js/util.min.js"></script>
+        <script src="../assets/js/collection.min.js"></script>
+        <script src="../assets/js/main.min.js"></script>
+        <script src="../assets/js/manage.min.js"></script>
         <script> firebase.initializeApp(config); </script>
     </head>
     <body>
@@ -26,22 +28,20 @@
         <!-- Content -->
         <div class="container">
             <div class="collection">
-                <div class="collection-title">
-                    Course Materials
-                </div>
-                <div id="list-collection" class="collection-content">
-                </div>
+                <div class="collection-title">Course Materials</div>
+                <div id="list-collection" class="collection-content"></div>
             </div>
         </div>
 
         <!-- Detail -->
-        <div id="detail">
+        <div id="detail" class="edit">
             <div class="back"></div>
             <div class="front">
                 <div class="detail-close">&times;</div>
-                <div class="detail-title">Title here</div>
-                <div class="detail-description">This is the short description</div>
-                <div class="detail-content">This is a long shit</div>
+                <div class="detail-save">&#10004;</div>
+                <input type="text" class="detail-title">
+                <input type="text" class="detail-description">
+                <textarea class="detail-content"></textarea>
                 <div class="detail-attachments">
                     <div class="detail-attachment"><a href="#">Attachment 1</a></div>
                     <div class="detail-attachment"><a href="#">Attachment 2</a></div>
@@ -52,5 +52,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Toaster -->
+        <div class="toaster"></div>
     </body>
 </html>

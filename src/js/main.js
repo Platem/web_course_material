@@ -28,19 +28,23 @@ $(function() {
         let id = $(this).attr('id'),
             item = items.find(x => x.id === id)
 
-        console.log(item)
-
-        $('#detail .detail-title').text(item.name)
-        $('#detail .detail-description').text(item.description)
-        $('#detail .detail-content').text(item.content)
+        if ($('#detail').hasClass('edit')) {
+            $('#detail .detail-title').val(item.name)
+            $('#detail .detail-description').val(item.description)
+            $('#detail .detail-content').val(item.content)
+        } else {
+            $('#detail .detail-title').text(item.name)
+            $('#detail .detail-description').text(item.description)
+            $('#detail .detail-content').text(item.content)
+        }
 
         $('#detail .detail-attachments').empty()
         for (let attach of item.attachments) {
-            console.log(attach)
             let $att = $('<div class="detail-attachment"><a href="' + attach.url + '">' + attach.name + '</a></div>')
             $('#detail .detail-attachments').append($att)
         }
 
+        $('#detail').attr('data-id', id)
         $('#detail').addClass('show')
     })
 

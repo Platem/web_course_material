@@ -1,0 +1,35 @@
+.toaster {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    width: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    z-index: 10;
+
+    .toast {
+        height: 50px;
+        margin: 5px;
+        background-color: $tiffany_blue;
+        border-radius: 10px;
+        line-height: 50px;
+        text-align: center;
+        transition: height 0.4s ease, color 0.4s ease 0.2s;
+        box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.4);
+
+        &.danger {
+            background-color: red;
+        }
+
+        &.hide {
+            transition: height 0.4s ease 0.2s, color 0.4s ease;
+            color: rgba(0, 0, 0, 0);
+            height: 0.0000001px;
+        }
+    }
+
+    @media screen and (min-width: 769px) {
+        width: 400px;
+    }
+}

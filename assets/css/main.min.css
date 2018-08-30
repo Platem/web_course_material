@@ -128,9 +128,34 @@ table {
   line-height: 30px;
   text-align: center;
   font-size: 24px;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
 }
 #detail .front .detail-close:hover {
   cursor: pointer;
+  background-color: #0CBABA;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.4);
+}
+#detail .front .detail-save {
+  position: absolute;
+  left: 5px;
+  top: 45px;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 16px;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+#detail .front .detail-save:hover {
+  cursor: pointer;
+  background-color: #0CBABA;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.4);
 }
 #detail .front .detail-title {
   position: absolute;
@@ -335,6 +360,67 @@ table {
   .collection .collection-content {
     width: 80%;
   }
+}
+
+.toaster {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: calc(100% - 40px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  z-index: 10;
+}
+.toaster .toast {
+  height: 50px;
+  margin: 5px;
+  background-color: #0CBABA;
+  border-radius: 10px;
+  line-height: 50px;
+  text-align: center;
+  -webkit-transition: height 0.4s ease, color 0.4s ease 0.2s;
+  transition: height 0.4s ease, color 0.4s ease 0.2s;
+  -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.4);
+}
+.toaster .toast.danger {
+  background-color: red;
+}
+.toaster .toast.hide {
+  -webkit-transition: height 0.4s ease 0.2s, color 0.4s ease;
+  transition: height 0.4s ease 0.2s, color 0.4s ease;
+  color: rgba(0, 0, 0, 0);
+  height: 0.0000001px;
+}
+@media screen and (min-width: 769px) {
+  .toaster {
+    width: 400px;
+  }
+}
+
+.btn {
+  height: 40px;
+  width: 120px;
+  border: 1px solid rgba(51, 51, 51, 0.4);
+  -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  font-size: 18px;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  background-color: #59656F;
+  color: white;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: #7d8b97;
 }
 
 html, body {
